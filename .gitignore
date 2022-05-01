@@ -1,0 +1,10 @@
+# All targets, at base as well as per project level
+**/build
+
+# UI specific files
+**/node_modules
+/.vscode/
+/*.env
+
+# Created in OSX
+.DS_Store
