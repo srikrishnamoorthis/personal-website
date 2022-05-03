@@ -23,9 +23,9 @@ function Menu(props) {
             <span className={classnames({'absolute w-14 h-full bg-[#333] z-0 rounded-full': true})}></span>
 			<div className={classnames('flex-col justify-center z-10 p-4 pt-5 h-14 w-14 transition-all duration-500 ease-in', { 'transform rotate-180': false })} 
 				onClick={toggleMenuVisibility}>
-				<div className={classnames('h-0.5 w-6 bg-white mb-1 transition-transform duration-500 ease-linear rounded-sm', { 'transform -rotate-45 translate-y-1.5': isOpen })}></div>
-				<div className={classnames('h-0.5 w-6 bg-white mb-1 transition-transform duration-500 ease-linear rounded-sm', { 'opacity-0': isOpen })}></div>
-				<div className={classnames('h-0.5 w-6 bg-white transition-transform duration-500 ease-linear rounded-sm', { 'transform rotate-45 -translate-y-1.5': isOpen })}></div>
+				<div className={classnames('h-0.5 w-6 bg-black dark:bg-white mb-1 transition-transform duration-500 ease-linear rounded-sm', { 'transform -rotate-45 translate-y-1.5': isOpen })}></div>
+				<div className={classnames('h-0.5 w-6 bg-black dark:bg-white mb-1 transition-transform duration-500 ease-linear rounded-sm', { 'opacity-0': isOpen })}></div>
+				<div className={classnames('h-0.5 w-6 bg-black dark:bg-white transition-transform duration-500 ease-linear rounded-sm', { 'transform rotate-45 -translate-y-1.5': isOpen })}></div>
 			</div>
 			{isOpen && 
 				<ul className={classnames('flex flex-col justify-center items-start transition-all duration-500 \
@@ -38,12 +38,12 @@ function Menu(props) {
                     <MenuItem 
                         label='PORTFOLIO' 
                         Icon={ImBriefcase}
-                        isActive={isHomePage}
+                        isActive={isPortfolio}
                         href='/' />
                     <MenuItem 
                         label='ABOUT' 
                         Icon={ImUser}
-                        isActive={isHomePage}
+                        isActive={isAboutPage}
                         href='/' />
 				</ul>
 			}
