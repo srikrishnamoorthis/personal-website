@@ -8,9 +8,7 @@ export function ThemeContextProvider({children}) {
     const [theme, setTheme] = useState(getDefaultTheme());
 
     useEffect(() => {
-        const oldTheme = theme === 'dark' ? 'light' : 'dark';
-        document.documentElement.classList.remove(oldTheme);
-        document.documentElement.classList.add(theme);
+        document.documentElement.className = theme;
     }, [theme]);
 
     const changeTheme = (theme) => {
