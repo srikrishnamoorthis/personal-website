@@ -20,8 +20,8 @@ function Menu(props) {
 
 	return (
 		<div className='flex flex-col absolute justify-center align-center'>
-            <span className={classnames({'absolute w-14 h-full bg-[#333] z-0 rounded-full': true})}></span>
-			<div className={classnames('flex-col justify-center z-10 p-4 pt-5 h-14 w-14 transition-all duration-500 ease-in', { 'transform rotate-180': false })} 
+            <span className={classnames({'absolute w-14 h-full z-0 rounded-full': true, 'bg-[#333]': isOpen})}></span>
+			<div className={classnames('flex-col justify-center z-10 p-4 pt-5 h-14 w-14 transition-all duration-500 ease-in hover:bg-[#333] hover:rounded-full', { 'transform rotate-180': false })} 
 				onClick={toggleMenuVisibility}>
 				<div className={classnames('h-0.5 w-6 bg-black dark:bg-white mb-1 transition-transform duration-500 ease-linear rounded-sm', { 'transform -rotate-45 translate-y-1.5': isOpen })}></div>
 				<div className={classnames('h-0.5 w-6 bg-black dark:bg-white mb-1 transition-transform duration-500 ease-linear rounded-sm', { 'opacity-0': isOpen })}></div>
@@ -44,7 +44,7 @@ function Menu(props) {
                         label='ABOUT' 
                         Icon={ImUser}
                         isActive={isAboutPage}
-                        href='/' />
+                        href='/about' />
 				</ul>
 			}
 		</div>

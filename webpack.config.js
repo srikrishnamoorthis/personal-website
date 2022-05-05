@@ -16,44 +16,46 @@ const HtmlPlugin = new HtmlWebpackPlugin({
 });
 
 module.exports = {
-      entry: "./src/index.js",
-      output: {
-         path: DIST_PATH,
-         filename: "[name].js",
-      },
-      plugins: [
-         HtmlPlugin,
-         new MiniCssExtractPlugin({
+        entry: "./src/index.js",
+        output: {
+            path: DIST_PATH,
+            filename: "[name].js",
+            publicPath: '/',
+        },
+        plugins: [
+            HtmlPlugin,
+            new MiniCssExtractPlugin({
             filename: "[name].css",
-         }),
-         new CleanWebpackPlugin({}),
-      ],
-      module: {
-         rules: [
+            }),
+            new CleanWebpackPlugin({}),
+        ],
+        module: {
+            rules: [
             {
-                  test: /\.js$/,
-                  exclude: /node_modules/,
-                  use: ["babel-loader"],
+                    test: /\.js$/,
+                    exclude: /node_modules/,
+                    use: ["babel-loader"],
             },
             {
-                  test: /\.html$/,
-                  use: ["html-loader"],
+                    test: /\.html$/,
+                    use: ["html-loader"],
             },
             {
-                  test: /\.css$/,
-                  use: [
-                     MiniCssExtractPlugin.loader,
-                     { loader: "css-loader", options: { importLoaders: 1 } },
-                     'postcss-loader'
-                  ],
+                    test: /\.css$/,
+                    use: [
+                        MiniCssExtractPlugin.loader,
+                        { loader: "css-loader", options: { importLoaders: 1 } },
+                        'postcss-loader'
+                    ],
             },
-         ],
-      },
-      devServer: {
-         host: '0.0.0.0',
-         port: 8080,
-         static: {
-            directory: path.resolve(__dirname, "./")
-         },
-      },
+            ],
+        },
+        devServer: {
+            host: '0.0.0.0',
+            port: 8080,
+            static: {
+                directory: path.resolve(__dirname, "./")
+            },
+            historyApiFallback: true
+        },
 };
