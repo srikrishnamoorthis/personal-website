@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import {ImHome3, ImUser, ImBriefcase} from 'react-icons/im';
+import {ImHome3, ImUser, ImBriefcase, ImBubble, ImWrench} from 'react-icons/im';
 import MenuItem from './menuItem';
 
 Menu.propTypes = {
@@ -17,6 +17,8 @@ function Menu(props) {
    const isHomePage = window.location.pathname.includes('/');
    const isAboutPage = window.location.pathname.includes('/about');
    const isPortfolio = window.location.pathname.includes('/portfolio');
+   const isSkills = window.location.pathname.includes('/skills');
+   const isContact = window.location.pathname.includes('/contact');
 
 	return (
 		<div className='flex flex-col absolute justify-center align-center'>
@@ -41,10 +43,20 @@ function Menu(props) {
                         isActive={isPortfolio}
                         href='/' />
                     <MenuItem 
+                        label='SKILLS' 
+                        Icon={ImWrench}
+                        isActive={isSkills}
+                        href='/skills' />
+                    <MenuItem 
                         label='ABOUT' 
                         Icon={ImUser}
                         isActive={isAboutPage}
                         href='/about' />
+                    <MenuItem 
+                        label='CONTACT' 
+                        Icon={ImBubble}
+                        isActive={isContact}
+                        href='/contact' />
 				</ul>
 			}
 		</div>

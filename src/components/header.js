@@ -6,7 +6,7 @@ Header.displayName = 'Header';
 
 export default function Header() {
     return (
-        <header className="w-full px-8 pt-6">
+        <header className="w-full pt-6">
             <nav className="flex align-center relative">
                 <Menu></Menu>
                 <ThemeMenu />

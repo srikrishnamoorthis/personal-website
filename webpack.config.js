@@ -31,23 +31,34 @@ module.exports = {
         ],
         module: {
             rules: [
-            {
-                    test: /\.js$/,
-                    exclude: /node_modules/,
-                    use: ["babel-loader"],
-            },
-            {
-                    test: /\.html$/,
-                    use: ["html-loader"],
-            },
-            {
-                    test: /\.css$/,
-                    use: [
-                        MiniCssExtractPlugin.loader,
-                        { loader: "css-loader", options: { importLoaders: 1 } },
-                        'postcss-loader'
-                    ],
-            },
+                {
+                        test: /\.js$/,
+                        exclude: /node_modules/,
+                        use: ["babel-loader"],
+                },
+                {
+                        test: /\.html$/,
+                        use: ["html-loader"],
+                },
+                {
+                        test: /\.css$/,
+                        use: [
+                            MiniCssExtractPlugin.loader,
+                            { loader: "css-loader", options: { importLoaders: 1 } },
+                            'postcss-loader'
+                        ],
+                },
+                {
+                    test: /\.(jpg|png|gif)$/,
+                    use: [{
+                        loader: 'url-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'theme/img',
+                            limit: 10000
+                        }
+                    }]
+                }
             ],
         },
         devServer: {
