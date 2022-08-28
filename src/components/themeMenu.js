@@ -16,7 +16,7 @@ function ThemeMenu() {
     }
 
     return (
-        <div className='ml-auto pt-4 text-black dark:text-white' title={title}
+        <div className='ml-auto pt-4 text-[#353534] dark:text-[#aaaaaa]' title={title}
             onClick={toggleTheme}>
             {isDarkTheme ? 
                 <ImSun className='h-6 w-6'/>

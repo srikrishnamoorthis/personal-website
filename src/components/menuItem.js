@@ -12,9 +12,9 @@ MenuItem.displayName = 'MenuItem';
 
 function MenuItem({isActive, label, href, Icon}) {
     return (
-        <li className='flex p-4 flex-start align-center text-black dark:text-white'>
+        <li className='flex p-4 flex-start align-center text-[#353534] dark:text-[#aaaaaa]'>
             <a href={href} className='flex p-1'>
-                <Icon className='text-black dark:text-white' />
+                <Icon className='text-[#353534] dark:text-[#aaaaaa]' />
                 {isActive && <div className='ml-4 bg-black dark:bg-white h-6 w-px'/>}
                 <span className={classnames({'pl-6': isActive, 'pl-10': !isActive})}>{label}</span>
             </a>

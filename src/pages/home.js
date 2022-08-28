@@ -8,9 +8,10 @@ function Home(props) {
     return (
         <div className='flex flex-1 justify-center items-center'>
             <h1 className='flex flex-col font-semibold text-8xl leading-normal -mt-4'>
-                <div className='text-black dark:text-white'>Hello.</div>
-                <div className='text-[#ea0f1e]'>I am </div>
-                <div className='text-[#ea0f1e]'>Sri Krishnamoorthi</div>
+                <div className='dark:text-[#aaaaaa]'>Hello.</div>
+                <div className='dark:text-white'>I am </div>
+                <div className='dark:text-white'>Sri Krishnamoorthi</div>
+                <div className='text-2xl text-[#73706D] dark:text-[#797979]'>Front-end Developer</div>
             </h1>
         </div>
     );

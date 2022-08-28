@@ -10,7 +10,7 @@ export default function Header() {
             <nav className="flex align-center relative">
                 <Menu></Menu>
                 <ThemeMenu />
-                {/* <div className="font-semibold pt-5 ml-4 text-black dark:text-white">Sri Krishnamoorthi.</div> */}
+                {/* <div className="font-semibold pt-5 ml-4 text-[#353534] dark:text-[#aaaaaa]">Sri Krishnamoorthi.</div> */}
             </nav>
         </header>
     );

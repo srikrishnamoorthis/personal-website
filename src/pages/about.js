@@ -8,10 +8,10 @@ About.displayName = 'About';
 
 function About(props) {
     return (
-        <div className='dark:text-white text-black pt-8'>
-            <div className='text-xl pb-3'>ABOUT</div>
-            <h1 className='text-7xl pb-4 font-semibold'>Sri Krishnamoorthi</h1>
-            <div className='text-4xl pb-4'>UI Developer, and sports enthusiast</div>
+        <div className='dark:text-[#aaaaaa] text-[#353534] pt-8'>
+            <div className='text-xl pb-2 text-[#73706D] dark:text-[#797979]'>ABOUT</div>
+            <h1 className='text-7xl pb-4 font-semibold dark:text-white'>Sri Krishnamoorthi</h1>
+            <div className='text-4xl pb-4 dark:text-[#F6F5F1]'>UI Developer, and sports enthusiast</div>
             <div className='flex flex-row flex-wrap-reverse lg:flex-nowrap pt-4'>
                 <div className='text-xl'>
                     <div className=''>
